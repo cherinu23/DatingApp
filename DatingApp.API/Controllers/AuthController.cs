@@ -51,8 +51,12 @@ namespace DatingApp.API.Controllers
             return StatusCode(201);
         }
         [HttpPost("login")]
+
         public async Task<IActionResult> Login(UserForRegisterDto userForLoginDto)
         {
+
+            throw new Exception("Eror because fuck it");
+
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
             if (userFromRepo == null)
@@ -79,7 +83,8 @@ namespace DatingApp.API.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenHandler.WriteToken(token)
             });
 
