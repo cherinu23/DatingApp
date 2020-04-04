@@ -1,3 +1,13 @@
 .dropdown-toggle, .dropdown-item {
     cursor: pointer;
 }
+a:not([href]):hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+}
+a:not([href]):hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;;
+}
